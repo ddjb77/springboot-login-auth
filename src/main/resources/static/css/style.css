@@ -1,0 +1,1230 @@
+@font-face {
+    font-family: Logo;
+    src: url(../fonte/FreeSansBold.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');/*
+
+/** GERAL **/
+
+html {
+    scroll-behavior: smooth;
+
+  }
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e3e3e3;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Logo';
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+/*** BANNER ***/
+
+#banner {
+    background-color: #0a0233;
+    width: 100%;
+    
+}
+
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin: 0 auto;
+    width: 75%;
+}
+
+#banner  p {
+    color: #fff;
+}
+
+#imagem-banner {
+    padding: 0 10px;
+     margin: 15px 20px 15px 5px;
+     width: 30%;
+     height: 300px;
+}
+
+.imagem-astronauta{
+    max-width: 80%;
+}
+
+#texto {
+   font-family: 'Logo';
+   font-size: 1.6rem;
+   margin: 80px auto;
+   padding:  20px -50px ;
+   color: #fff;
+   width: 50%;
+  
+}
+
+/*BARRA TOPO PERFIL*/
+#barra-perfil-topo {
+    width:100%;
+    height:6vh;
+    background-color:#050213;
+    color:white;
+    position: relative;
+
+}
+
+
+.barra{
+    display: flex;
+    vertical-align: middle;  
+    justify-content: center;
+}
+
+
+.item-geral {
+    margin: 0 30px;
+    display: flex;
+}
+
+
+.item{
+    margin: 10px 0;
+}
+
+.img-item {
+    margin: 10px 5px;
+}
+
+
+
+
+/***  OPÇÕES ***/
+
+#escolha {
+    font-size: 1.8rem;
+    text-align: center;
+    background-color: #e3e3e3;
+    padding: 20px;
+}
+
+.escolha {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.lidos, .proximos, .lista, .emprestimo {
+    margin: 2px auto;
+    width: 25%;
+}
+
+.lidos p, .proximos p, .lista p, .emprestimo p {
+    font-weight: bolder;
+    font-size: 1.1rem;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.icone {
+    width: 80%;
+    border-radius: 12px;
+    box-shadow: 7px 7px 7px #2d2d2e;
+}
+
+
+.lidos:hover, .proximos:hover, .lista:hover, .emprestimo:hover {
+    transition-delay: 3s;
+    
+}
+
+.escolha  p {
+    font-size: 0.6em;
+}
+
+
+
+/***** CONFIGURAÇÕES GERAIS DE TODAS AS  PÁGINAS ******/
+
+/* BOTÃO DO FORMULÁRIO  E LOGIN **/
+
+.cadastro, .entrar, .login, .cadastrar {
+    color: #0a0233;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin: 0 auto;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+
+.cadastro:hover, .entrar:hover, .login:hover, .cadastrar:hover {
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+.buttons {
+   display:flex;
+   justify-content: space-between;
+}
+
+
+
+
+/* TABELA */
+
+#tabela {
+    text-align: center;
+    padding: 50px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 70%;
+    border-spacing: 2px;
+   
+}
+
+th, td {
+    padding: 15px;
+    width: 20%;
+}
+
+
+th {
+    background-color: #ecebeb;
+    color: #000;
+}
+
+td {
+    background-color: #f3f2f2;
+    color: #000;
+    border-top: 2px solid #e6e3e3;
+}
+
+
+/**** DATA TABLE *****/
+
+table.dataTable select {
+    border-radius: 20px;
+    background-color: #c54545;
+}
+
+
+/***** POPUP ******/
+
+
+#modal {
+    display: none;
+}
+
+#modal-sucesso {
+    display: none;
+}
+
+.modal-container, .modal-container-guia{
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    animation: entrada 0.5s;
+}
+
+
+.topo-form {
+    background-color: #0a0233;
+    width: 95%;
+    height: 65px;
+    top: 0;
+    left: 0;
+    color: #fff;
+    position: absolute;
+    padding: 0 20px;
+    font-size: 0.8rem;
+    text-align:center;
+}
+
+
+input[type=checkbox] {
+    cursor: pointer;
+    width: 3%;
+    left: 0;
+    height: 16px;
+    margin:  10px 0 ;
+    vertical-align: middle;
+    position: relative;
+    top: -1px;
+    
+  }
+
+  .leitura-atual {
+      margin: 20px -10px;
+      padding: 0 18px;
+  }
+
+
+.modalpopup, .modalpopuperfil {
+    background-color: #e3e3e3;
+    background-size: 100%;
+    width: 650px;
+    min-width: 100px;
+    padding: 80px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.modalpopuperfil {
+    padding: 50px;
+}
+
+.fechar {
+    font-family:cursive;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    color: #fff;
+    background-color: #0a0233;
+    border: none;
+    cursor: pointer;
+}
+
+
+.sucesso {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 20px 0;
+}
+
+
+/*** FORMULÁRIO ***/
+
+form {
+    width: 100%;
+}
+
+input, select {
+    padding: 10px;
+    width: 94%;
+    margin: 10px 0;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+}
+
+.lado-a-lado {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+select {
+    font-size: 1rem;
+    color: #7a7976;
+    flex: 2;
+    width: auto;
+}
+
+input[type="number"]{
+    flex: 2;
+
+}
+
+input::placeholder {
+    font-size: 1rem;
+}
+
+
+
+form > p {
+    color: #807b7b;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.btn {
+    text-align: center;
+    margin: 40px auto;
+    
+}
+
+textarea {
+    resize: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.salvar {
+    background-color: #0b7a66;
+    padding: 15px;
+    color: #fff;
+    margin: 0 20px;
+    border-radius: 5px;
+}
+
+.cancelar {
+    background-color: #c54545;
+    padding: 15px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+
+.ok {
+    background-color: #0b7a66;
+    padding: 15px 30px;
+    color: #fff;
+    margin:  40px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.btn-ok {
+    margin: 30px 0;
+}
+
+/**** ESTRELAS ****/
+
+.avaliacao, input[type=radio]{
+    display: block;
+}
+
+.avaliacao > p {
+    margin: 0 10px;
+}
+
+.rating {
+    width: 80%;
+    font-size: 30px;
+    padding: 0;
+}
+
+.rating input {
+float: right;
+display: block;
+opacity: 0;
+left: 0;
+width: 10%;
+padding: 0;
+}
+
+.rating input,
+.rating label {
+    padding: -30px;
+    color: #aaa;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+}
+
+.rating label:hover ~ label,
+.rating input:focus ~ label,
+.rating label:hover,
+.rating input[type=radio]:hover,
+.rating input[type=radio]:hover ~ a,
+.rating input[type=radio]:focus,
+.rating input[type=radio]:focus ~ a		{
+    color: orange;
+    cursor: pointer;
+}
+.rating2 {
+    direction:rtl;
+}
+.rating2 a {
+    padding: 0;
+}
+
+
+/**** ERRO ****/
+
+#erro, #inicio {
+    background-color: #0a0233;
+}
+
+.erro {
+    text-align: center;
+    margin: 0 auto;
+    margin: 50px 0;
+}
+
+.erro > h1 {
+    color: #fff;
+    font-size: 2.3rem;
+    padding: 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.imagem-erro {
+    width: 25%;
+}
+
+.botao-erro{
+    margin: 10px 0;
+}
+
+.btn-erro {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-erro:hover{
+    background-color: #fff;
+    color: #0a0233;
+}
+
+
+
+
+/**** INICIO ****/
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #0a0233;
+    z-index: 9999;
+    height: 46px;
+}
+
+.botoes {
+    display: inline;
+    margin:  20px;
+    float: right;
+}
+
+
+
+.login, .cadastrar {
+    line-height: normal;
+    padding: 7px 17px;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.logo-inicio {
+    float: left;
+    width: 20%;
+}
+
+.diminuir-logo {
+    width: 55%;
+    margin: 15px;
+}
+
+.inicio {
+    margin: 0 auto;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.seta {
+    margin: 0 auto;
+}
+
+.setas {
+    opacity: 0.7;
+}
+
+#img-emprestimo {
+    width: 325px;
+}
+
+#img-quiz {
+    width: 325px;
+    transform:rotateY(360deg);
+}
+
+#msg-final {
+    padding: 80px 0;
+}
+
+.img-final {
+    text-align: center;
+}
+
+.btn-final {
+    padding: 10px 80px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.final {
+    width: 50%;
+    font-size: 1.2rem;
+    margin: -30px auto;
+}
+
+
+/**** MENSAGEM TELA DE CADASTRO *****/
+
+.msg {
+    text-align: center;
+}
+
+#mensagem {
+    color: rgb(224, 197, 138);
+    margin: 10px;
+}
+
+#conheca {
+  text-align: center;
+  margin: 50px;
+}
+
+
+.titulo {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 60px 0 10px 0;
+}
+
+
+
+.contexto {
+    width: 80%;
+    color: #fff;
+    display: flex;
+    margin: 20px auto;
+}
+
+
+.imagem-conheca {
+    flex: 1;
+    animation: entrada .80s forwards;
+}
+
+.texto {
+    font-size: 1.5rem;
+    margin: 60px;
+    text-align: justify;
+    align-self: center;
+}
+
+
+#intro {
+    width: 100%;
+}
+
+
+
+/**** LOGIN ****/
+
+.img-login {
+    text-align: center;
+    margin-bottom: -200px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.imagem-login {
+    max-width: 100%;
+    
+} 
+
+.imagem-cadastro {
+    max-width: 35%;
+}
+
+#login, #cadastrar {
+    margin: 150px auto;
+    padding: 50px;
+    background-color: #0a0233;
+    width: 30%;
+    border-radius: 20px;
+}
+
+.formulario h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+   
+}
+.signed {
+    text-align: center;
+    text-decoration: none;
+    color:#fff;
+}
+
+.signed span a {
+    
+    color:rgb(196, 194, 194);
+    text-decoration: underline;
+
+}
+
+
+/*** RODAPÉ ****/
+
+.rodape {
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+    vertical-align: middle;
+    padding:2% 0;
+    bottom: 0;
+   
+    
+}
+
+.logo-rodape {
+    width: 12%;
+}
+
+
+/*** ROBÔ ***/
+
+#robo {
+    right: 0;
+}
+
+.robo {
+    right: 0;
+    bottom: 5px;
+    display: flex;
+    position: fixed;
+    width: 45%;
+}
+
+.balao {
+    width: 50%;
+    height: 10%;
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 60px 60px 0px 60px;
+    margin: 0 -20px;
+    
+}
+
+#frases {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.3rem;
+}
+
+#fechar {
+    font-family: 'Logo';
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    margin: 0 5px;
+    font-size: 1.2rem;
+    
+}
+
+
+
+/***** GUIA DAS GALÁXIAS *****/
+
+
+  .guia {
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  .guia > h1 {
+    font-size: 1.6rem;
+  }
+
+  .pular-intro {
+    margin: 25px auto;
+  }
+
+  .btn-guia {
+    margin: 70px auto;
+    background-color: #0a0233;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+
+/*** PAGINA INTRO GUIA ****/
+
+#intro-guia {
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
+
+#intro-guia > h1 {
+    font-size: 1.8rem;
+}
+
+.escolha-guia {
+    display: flex;
+    text-align: center;
+    margin: auto;
+	top:50%;
+}
+
+.anuncio, .forum {
+    background-color: #0a0233;
+    color: #fff;
+    padding: 20px;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+.anuncio > a {
+    color: #fff;
+}
+
+
+
+/***** ANÚNCIO ******/
+
+.banner-anuncio {
+    padding: 40px;
+}
+
+
+.titulo-anuncio > h1 {
+   border-bottom: 3px solid #0a0233;
+   margin: 30px;
+   padding: 0;
+   width: 12%;
+   font-size: 1.6rem;
+}
+
+
+.titulo-meus-anuncios > h1 {
+    border-bottom: 3px solid #0a0233;
+    margin: 30px;
+    padding: 0;
+    width: 15%;
+    font-size: 1.6rem;
+ }
+ 
+
+.ver-anuncios {
+    margin: auto 10px;
+}
+
+
+
+#anuncios {
+    margin: 50px auto;
+    width: 90%;
+    display: flex;
+    text-align: center;
+}
+
+.anuncio-usuario {
+    border: 1px solid #0a0233;
+    color: #fff;
+    margin: 0 auto;
+    width: 60%;
+    padding: 5px 10px;
+    border-radius: 5px ;
+}
+
+.capa-livro, .img-livro {
+    width: 100%;
+}
+
+.nome-livro {
+    font-size: 1.3rem;
+    color: #0a0233;
+    font-weight: bold;
+}
+
+.usuario {
+    margin: 0 auto;
+}
+
+.avatar-user {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.avatar-guia {
+    margin: 5px 0;
+    width: 20%;
+    border-radius: 50%;
+}
+
+.nome-usuario {
+    font-size: 1rem;
+    color: #0a0233;
+    margin: auto 5px;
+    font-weight: bold;
+}
+
+
+
+/********** MEUS ANUNCIOS ********/
+
+.editar-anuncio {
+    text-align: right;
+    color: #000;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.excluir-anuncio {
+    text-align: right;
+    margin: 0 50px 0 0;
+    color: #c54545;
+    font-weight: bold;
+}
+
+
+/**************** DEPOIS PASSAR PARA OUTRO CSS ******************************/
+
+/**** MEDIA QUERY ****/
+
+@media (max-width: 800px) {
+
+    body {
+        margin: revert;
+        padding: 0;
+    }
+
+    /** INICIO **/
+
+    .inicio, nav {
+        display: block;
+    }
+
+    nav {
+        padding: 10px 0;
+    }
+
+
+    .img-responsiva {
+        width: -webkit-fill-available;
+    }
+
+    #conheca, .imagem-conheca{
+        text-align: center;
+        margin: 0;
+    }
+   
+
+    .contexto {
+        display: inline;
+        margin: 0 auto;
+    }
+
+    .titulo > h1 {
+        font-size: 1.2rem;
+    }
+
+    .texto {
+        font-size: 1rem;
+        padding: 0;
+        margin: 15px 50px;
+        text-align: justify;
+    }
+
+
+    .imagem-conheca > img {
+        max-width: 50%;
+    }
+
+
+    .final {
+
+        width: auto;
+
+    }
+
+    .btn-final{
+       padding: 10px;
+       font-size: 1rem;
+    }
+
+
+    .logo-inicio {
+        display: none;
+    }
+
+    #login {
+        width: auto;
+    }
+
+    .formulario {
+        width: auto;
+        font-size: 0.8rem;
+    }
+
+
+    /** CADASTRO **/
+
+    .imagem-cadastro {
+        max-width: none;
+        width: 70%;
+    }
+
+    .signed {
+        font-size: 1rem;
+    }
+
+
+
+    /********* CONQUISTAS ************/
+
+   
+
+    /** RODAPÉ **/
+
+    .rodape {
+        padding: 10px 0 0 0;
+        width: auto;
+    }
+
+    .logo-rodape {
+        width: 40%;
+    }
+
+}
+
+
+
+
+
+@media only screen and (min-device-width: 851px) and (max-device-width: 950px) {
+
+    body {
+        margin: revert;
+        padding: 0;
+    }
+
+    /** INICIO **/
+
+    .inicio, nav {
+        display: block;
+    }
+
+    nav {
+        padding: 20px 0;
+    }
+
+    .login, .cadastrar {
+        font-size: 2rem;
+    }
+
+    .img-responsiva {
+        width: -webkit-fill-available;
+    }
+
+    #conheca, .imagem-conheca{
+        text-align: center;
+        margin: 0;
+    }
+   
+
+    .contexto {
+        display: inline;
+        margin: 0 auto;
+    }
+
+    .titulo > h1 {
+        font-size: 3rem;
+    }
+
+    .texto {
+        font-size: 2rem;
+        padding: 0;
+        margin: 15px 50px;
+        text-align: justify;
+    }
+
+
+
+    .final {
+
+        width: auto;
+
+    }
+
+    .btn-final{
+       padding: 15px;
+       font-size: 2rem;
+    }
+
+
+    .logo-inicio {
+        display: none;
+    }
+
+    #login {
+        width: auto;
+    }
+
+    .formulario {
+        width: auto;
+        font-size: 0.8rem;
+    }
+
+
+    /** CADASTRO **/
+
+    .imagem-cadastro {
+        max-width: none;
+        width: 70%;
+    }
+
+    .signed {
+        font-size: 1rem;
+    }
+
+
+    /** RODAPÉ **/
+
+    .rodape {
+        padding: 10px 0 0 0;
+        width: auto;
+    }
+
+    .logo-rodape {
+        width: 40%;
+    }
+
+}
+
+
+/*** PCS ***/
+
+
+@media only screen and (min-device-width: 1280px) and (max-device-width: 1500px) {
+
+
+    #login {
+        padding: 30px 50px;
+    }
+
+   .imagem-cadastro {
+       width: 20%;
+   }
+
+   .img-login {
+       margin-top: 20px;
+   }
+
+   .btn {
+       margin: 15px auto 20px auto;
+   }
+
+   #btn-cadastro, #btn-login {
+       font-size: 1rem;
+   }
+
+   #cadastrar{
+       padding: 25px 30px;
+   }
+
+
+}
+
+
+
+@media only screen and (min-device-width: 1500px) and (max-device-width: 1600px) {
+
+    .inicio {
+        padding: 300px 0;
+    }
+
+    .pagina-inicial {
+        padding: 180px 0;
+       
+    }
+
+    nav {
+        padding: 20px 0;
+    }
+
+    .login, .cadastrar {
+        font-size: 1.3rem;
+    }
+
+}
+
+
+
+@media only screen and (min-device-width: 1700px) and (max-device-width: 2000px) {
+
+    .inicio {
+        padding: 300px 0;
+    }
+
+    .pagina-inicial {
+        padding: 145px 0;
+       
+    }
+
+    nav {
+        padding: 20px 0;
+    }
+
+    .login, .cadastrar {
+        font-size: 1.3rem;
+    }
+
+}
+
+
+
+
+
+@media only screen and (min-device-width: 1700px) and (max-device-width: 2000px) {
+
+    .inicio {
+        padding: 300px 0;
+    }
+
+    .pagina-inicial {
+        padding: 145px 0;
+       
+    }
+
+    nav {
+        padding: 20px 0;
+    }
+
+    .login, .cadastrar {
+        font-size: 1.3rem;
+    }
+
+}
+
+
+
+
+/************** TESTEEE ***************/
+
+

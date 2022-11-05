@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script th:src="@{js/script-teste.js}"></script>
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/criar-perfil.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    
+    <title> Página inicial</title>
+</head>
+<body>
+
+    <section id="banner">
+        
+        <div class="banner">
+            <div id="imagem-banner">
+                
+            </div>
+            <div id="texto">
+              
+            </div>
+        </div>
+    
+    </section>
+
+
+    <section id="escolha">
+        <h1> Escolha o que deseja fazer </h1>
+        <div class="escolha">
+            <div class="lidos">
+                <a href="lidos.html"> <img src="img/icone-lidos.png" class="icone" alt="desenho de um astronauta lendo um livro"> </a>
+                <p> Livros lidos / Leitura atual </p>
+            </div>
+
+            <div class="proximos">
+              <a href="proximos.html">  <img src="img/icone-proximo.png" class="icone" alt="desenho de um astronauta em um foguete"> </a> 
+                <p> Liste suas próximas leituras </p>
+            </div>
+           
+            <div class="lista">
+                <a href="lista.html">  <img src="img/icone-lista.png" class="icone" alt="desenho de um astronauta pegando uma estrela"> </a>
+                <p> Faça sua lista de desejos </p>
+            </div>
+
+            <div class="emprestimo">
+                <a href="emprestados.html"> <img src="img/icone-emprestimo.png" class="icone" alt="desenho de dois astronautas conversando"> </a>
+                <p> Marque aqui seus livros emprestados </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <img src="img/logo-livronauta.png" class="logo-rodape">
+    </footer>
+
+
+   <!--- <div id="modal-user" class="modal-container">
+      <div class="modalpopup">
+          <div class="topo-form">
+              <h1>  Bem vindo ao livronauta  </h1>
+          </div>
+          <div id="bem-vindo-user">
+            <h1> Bem vindo @user</h1>
+
+            <img src="img/icone-configurar.png">
+
+            <h2> Vamos configurar o seu perfil </h2>
+          </div>
+        </div>
+      </div> -->
+
+
+
+    <div id="modal" class="modal-container">
+        <div class="modalpopuperfil">
+            <div class="topo-form">
+                <h1>Olá <span class="nome_usuario" th:text="${usuario.login}"></span>! Vamos configurar seu perfil  </h1>
+            </div>
+
+           <!-- <div class="formulario">
+                <form>
+                    <label for="genero"> Qual livro você está lendo agora ?</label>
+                    <input type="text" id="genero" name="genero" placeholder="Nome do livro">
+                </form>
+
+                <br>
+
+                <a href="#" class="salvar" onclick="perfil()"> OK </a> -->
+
+              
+
+                <div class="container">
+                    
+                    <div class="progress-bar">
+                      <div class="step">
+                        <p> Meta </p>
+                        <div class="bullet">
+                          <span>1</span>
+                        </div>
+                        <div class="check fas fa-star"></div>
+                      </div>
+                      <div class="step">
+                        <p> Leitura </p>
+                        <div class="bullet">
+                          <span>2</span>
+                        </div>
+                        <div class="check fas fa-star"></div>
+                      </div>
+                      <div class="step">
+                        <p> Avatar </p>
+                        <div class="bullet">
+                          <span>3</span>
+                        </div>
+                        <div class="check fas fa-star"></div>
+                      </div>
+                      <div class="step">
+                        <p> Conferir </p>
+                        <div class="bullet">
+                          <span>4</span>
+                        </div>
+                        <div class="check fas fa-star"></div>
+                      </div>
+                    </div>
+
+
+
+                    <div class="form-outer">
+                     <form th:object="${meta}" th:action="@{/perfil}" th:method="post">
+                        <div class="page slide-page">
+                          <div class="title titulo-perfil"> Selecione a meta desejada </div>
+
+                          <div class="selecionar-meta">
+                            <div class="opcoes">
+                              <input type="radio" th:field="*{escolherMeta}" id="diaria" value="diaria">
+                              <label for="diaria" class="metas">Meta Diária</label><br>
+                            </div>
+                              <p class="desc-meta"> Selecione esta meta para calcular a quantidade de páginas lidas por dia </p>
+                          </div>
+                          
+                          <div class="selecionar-meta">
+                            <div class="opcoes">
+                              <input type="radio" th:field="*{escolherMeta}"  id="mensal"  value="mensal">
+                              <label for="mensal" class="metas">Meta Mensal</label><br>
+                            </div>
+                            <p class="desc-meta"> Selecione esta meta para calcular a quantidade de páginas lidas por mês</p>
+                          </div>
+
+                          <div class="selecionar-meta">
+                            <div class="opcoes">
+                              <input type="radio" th:field="*{escolherMeta}" id="anual" value="anual">
+                              <label for="anual" class="metas">Meta Anual </label><br>
+                            </div>
+                            <p class="desc-meta"> Selecione esta meta para calcular a quantidade de livros lidos por ano </p>
+                          </div>
+                          
+                          <div class="field">
+                            <button class="firstNext next">Próximo</button>
+                          </div>
+                        </div>
+					</form>
+</div>
+              
+    <!--              <div class="page">
+                          <div class="title titulo-perfil"> Leitura Atual </div>
+
+                          <div class="leitura-atual">
+                          
+                            <div id="livro-atual">
+                              <label for="genero" class="label"> Qual livro você está lendo agora ?</label>
+                              <input type="text" id="genero" name="genero" placeholder="Nome do livro">
+
+                              <label for="pagina" class="label"> Em qual página você está?</label>
+                              <input type="number" id="genero" name="pagina" placeholder="Página">
+                            </div>
+                          
+                           <div class="opcoes">
+                            <input type="checkbox" id="checar" onclick="leituraAtual()"><small> Não estou lendo nada no momento </small> 
+                           </div>
+                          
+                           <div id="pergunta-desbloqueio">
+                            <label for="genero" class="label"> Qual livro você pretende ler agora ?</label>
+                            <input type="text" id="genero" name="genero" placeholder="Nome do livro">
+                           </div>
+                          
+                           
+                          </div>
+                          
+                         
+                          <div class="field btns">
+                            <button class="prev-1 prev">Anterior</button>
+                            <button class="next-1 next">Próximo</button>
+                          </div>
+                        </div>
+              
+                        <div class="page">
+                          <div class="title"> Escolha um avatar </div>
+
+                          <div class="opcoes">
+                            <img src="img/avatar-gato.png" class="avatar">
+                            <img src="img/avatar-cachorro.png" class="avatar">
+                           
+                          </div>
+
+                          <div class="opcoes">
+                            <img src="img/avatar-urso.png" class="avatar">
+                            <img src="img/avatar-coelho.png" class="avatar">
+
+                          </div>
+                          
+
+
+                          <div class="field btns">
+                            <button class="prev-2 prev">Anterior</button>
+                            <button class="next-2 next">Próximo</button>
+                          </div>
+                        </div>
+              
+                        <div class="page">
+                          <div class="title">Detalhes da do perfil </div>
+
+                          <h2> Meta: </h2> <br>
+                          <h2> Leitura Atual: </h2> <br>
+                          <h2> Avatar: </h2>
+                          
+
+
+                          <div class="field btns">
+                            <button class="prev-3 prev">Anterior</button>
+                            <button class="submit"> Confirmar </button>
+                          </div>
+                        </div>
+                
+                    </div>
+                  </div>
+
+                   
+           
+            </div>
+        </div>
+   --> 
+
+    <script src="js/script-perfil.js"></script>
+
+    
+</body>
+</html>

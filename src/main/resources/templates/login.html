@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" th:href='@{/css/style.css}' />
+ 
+    
+    <title> Login </title>
+</head>
+
+<body>
+
+    <div class="img-login">
+        <img src="img/botao-entrar.png" class="imagem-login">
+    </div>
+    <section id="login">
+        <div class="formulario">
+            <h1> Login </h1>
+            <form method="post" action="/login" th:object="${validarSenha}">
+                <input type="text" name="login" placeholder="login" class="email" th:onclick="email()">
+                <input type="password" placeholder="Senha" name="password" class="senha" th:onkeypress="senha()">
+
+                <div class="btn">
+                    <input type="submit" name="sign-in" value="Login" class="entrar" id="btn-login" th:onmouseover="entrar()" th:onmouseout="email()"> Entrar
+                </div>
+                <div class="signed">
+                    <span>
+                        Ainda não tem cadastro?
+                    </span>
+                    <span>
+                        <a href="/cadastrar"> Cadastre-se </a>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer class="rodape">
+        <img src="img/logo-livronauta.png" alt="logo do site no rodapé " class="logo-rodape">
+    </footer>
+<script th:src="@{/js/script.js}"></script>
+</body>
+
+</html>
